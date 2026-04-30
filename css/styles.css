@@ -1,0 +1,102 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+ol,
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* ===========================================
+    Variables
+============================================== */
+:root {
+  --color-principal: #0b8bab;
+  --color-secundario: #c20d0d;
+  --color-bg-principal: #faf3f7;
+  --color-separacion: #cecece;
+  --color-texto: #131313;
+  --color-negro-90: #191919;
+  --color-negro-85: #262626;
+  --color-negro-70: #4c4c4c;
+  --color-negro-55: #737373;
+  --color-negro-40: #999;
+  --color-negro-25: #bfbfbf;
+  --color-negro-10: #e5e5e5;
+  --color-negro-5: #f2f2f2;
+  --font-principal: "Inter", sans-serif;
+  --font-secundaria: "Old Standard TT", serif;
+}
+/* ===========================================
+    Estructura
+============================================== */
+header {
+  padding: 20px 30px;
+}
+nav {
+  padding: 10px 0;
+}
+/* ===========================================
+    Textos
+============================================== */
+h1,h2,h3,h4 {
+  font-family: var(--font-secundaria);
+  font-weight: 400;
+}
+h1 {
+  font-size:2rem;
+}
+p {
+  font: 1.3rem/1.4 var(--font-principal);
+}
+/* ===========================================
+    Formato
+============================================== */
+.center {
+  text-align: center;
+}
+.lh-titles {
+  line-height: 1.1;
+}
+.mayusculas {
+  text-transform: uppercase;
+}
+.colorPrincipal {
+  color: var(--color-principal);
+}
+.fondoPrincipal {
+  background-color: var(--color-bg-principal);
+}
+.borderBottom1px {
+  border-bottom: 1px solid var(--color-separacion)
+}
+
+
+/* ===========================================
+    Responsive 768
+============================================== */
+@media screen and (min-width:768px) {
+
+}/*cierra 768*/
+
+/* ===========================================
+    Responsive 990
+============================================== */
+@media screen and (min-width:990px) {
+
+
+}/*cierra 990*/
+
+
+/* ===========================================
+    Responsive 1200
+============================================== */
+@media screen and (min-width:1200px) {
+
+
+}/*cierra 1200*/
