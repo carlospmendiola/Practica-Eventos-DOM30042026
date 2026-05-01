@@ -6,8 +6,7 @@
   <title>Práctica Eventos DOM</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link
-  href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,500;1,14..32,500&family=Old+Standard+TT:wght@400;700&display=swap"
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&family=Old+Standard+TT:wght@400;700&display=swap"
   rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -16,9 +15,22 @@
     <h1 class="lh-titles mayusculas colorPrincipal">Filtro Imágenes</h1>
   </header>
   <nav class="fondoPrincipal center borderBottom1px">
-    <p>Etiquetas imágenes</p>
+    <h2>Etiquetas</h2>
+    <p class="lh-texto">Pulsa en las etiquetas para ver las imágenes</p>
+    <ul>
+      <li><button class="borderRadius10">Playa</button></li>
+      <li><button class="borderRadius10">Tierra</button></li>
+      <li><button class="borderRadius10">Puente</button></li>
+      <li><button class="borderRadius10">Mujer</button></li>
+      <li><button class="borderRadius10">Soleado</button></li>
+    </ul>
   </nav>
-  <main></main>
+  <main>
+    <p class="center">Se han encontrado <span class="colorPrincipal">3 imágenes</span> con la etiqueta <span class="colorPrincipal">mar</span></p>
+    <div class="imgEtiqueta borderNormal borderRadius10">
+      <img src="images/1.jpg" alt="">
+    </div>
+  </main>
   <script src="js/main.js"></script>
 </body>
 </html>
