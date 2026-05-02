@@ -18,13 +18,20 @@
     <h2>Etiquetas</h2>
     <p class="lh-texto">Pulsa en las etiquetas para ver las imágenes</p>
     <div id="listBotones" class="containerBotones">
-      
+      <!-- Aquí insertamos el listado de los botones con las etiquetas -->
     </div>
   </nav>
   <main>
-    <p class="center">Se han encontrado <span class="colorPrincipal">3 imágenes</span> con la etiqueta <span class="colorPrincipal">mar</span></p>
-    <div class="imgEtiqueta borderNormal borderRadius10">
-      <img src="images/1.j" alt="">
+    <div id="txtPresentacion" class="mb20px">
+      <!-- Aquí va el texto que nos indica cuántas imágenes de cada categoría -->
+    </div>
+    <h2 class="center">Imagen destacada</h2>
+    <div id="imagenPrincipal" class="imgEtiqueta borderNormal borderRadius10">
+      <!-- Aquí se pinta la imagen principal que cambia dependiendo de la categoría seleccionada -->
+    </div>
+    <h2 class="center">Imagen relacionadas</h2>
+    <div id="imgSecundarias" class="containerImagenes">
+      <!-- Aquí se pintan las imagenes secundarias en el caso que hayan más en la categoría seleccionada -->
     </div>
   </main>
   <script src="js/main.js"></script>

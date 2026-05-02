@@ -41,7 +41,7 @@ header {
 nav {
   padding: 10px 0 15px;
 }
-nav ul {
+.containerBotones {
   display: flex;
   gap: 5px;
   flex-flow: row wrap;
@@ -57,7 +57,16 @@ main {
   overflow: hidden;
   margin: 40px 0 30px;
 }
-.imgEtiqueta img {
+
+.containerImagenes {
+  display: flex;
+  gap: 20px;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 15px auto;
+  width: 95%;
+}
+img {
   max-width: 100%;
 }
 button {
@@ -115,6 +124,9 @@ p {
 .borderRadius10 {
   border-radius: 10px;
 }
+.mb20px {
+  margin-bottom: 20px;
+}
 p span {
   font-weight: 800;
 }
@@ -123,14 +135,24 @@ p span {
     Responsive 768
 ============================================== */
 @media screen and (min-width:768px) {
-
+  .containerImagenes {
+      gap: 20px;
+      flex-flow: row wrap;
+      justify-content: center;
+      width: 95%;
+  }
+  .containerImagenes img {
+    width: calc(50% - 10px);
+  }
 }/*cierra 768*/
 
 /* ===========================================
     Responsive 990
 ============================================== */
 @media screen and (min-width:990px) {
-
+.containerImagenes img {
+    width: calc(33% - 10px);
+  }
 
 }/*cierra 990*/
 
