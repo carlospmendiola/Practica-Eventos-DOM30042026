@@ -16,7 +16,7 @@ Web App que permite filtrar imágenes por categorías generadas dinámicamente a
 ## Tecnologías
 - HTML5
 - CSS3
-- JavaScript Vanilla
+- JavaScript
 
 ## Conceptos de JavaScript aplicados
 - Manipulación del DOM con createElement, append e innerHTML
