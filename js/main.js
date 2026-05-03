@@ -9,13 +9,13 @@ const arrayImagenes = [
     imagen: 'images/img1-cielo-campo-globos.jpg', 
     id: 'imagen1',
     alt: 'Alt-imagen1',
-    tags: ['campo','globos']
+    tags: ['nubes','globos']
   },
   {
     imagen: 'images/img2-cielo-mar-sol.jpg', 
     id: 'imagen2',
     alt: 'Alt-imagen2',
-    tags: ['cielo','mar']
+    tags: ['nubes','mar','sol']
   },
   {
     imagen: 'images/img3-cielo-nubes-sol.jpg', 
@@ -32,25 +32,25 @@ const arrayImagenes = [
   { imagen: 'images/img5-nubes-globos.jpg',
     id: 'imagen5',
     alt: 'Alt-imagen5',
-    tags: ['cielo','globos']
+    tags: ['nubes','globos']
   },
   {
     imagen: 'images/img6-edificio-rio.jpg',
     id: 'imagen6',
     alt: 'Alt-imagen6',
-    tags: ['edificio','rio']
+    tags: ['edificio','cielo']
   },
   {
     imagen: 'images/img7-edificio-piedra.jpg',
     id: 'imagen7',
     alt: 'Alt-imagen7',
-    tags: ['edificio','ciudad']
+    tags: ['edificio','cielo']
   },
   {
-    imagen: 'img8-mar-pajaros-sol.jpg',
+    imagen: 'images/img8-playa-mar.jpg',
     id: 'imagen8',
     alt: 'Alt-imagen8',
-    tags: ['edificio','rio']
+    tags: ['mar','cielo','nubes']
   }
 ]
 
@@ -68,7 +68,8 @@ const arrayImagenes = [
 
     crearBoton.classList.add('borderRadius10');
     crearBoton.textContent = (tag);
-/* Con esta función creamos los botones con las etiquetas y seleccionamos las imágenes que tienen esas etiquetas */
+
+    /* Con esta función creamos los botones con las etiquetas y seleccionamos las imágenes que tienen esas etiquetas */
     crearBoton.addEventListener("click", () => {
       const crearDescripcion = document.createElement('p');
       const imagenesFiltradas = arrayImagenes.filter((imagen) => {
@@ -79,26 +80,35 @@ const arrayImagenes = [
       crearImagencentral.src = imagenesFiltradas[0].imagen;
       crearImagencentral.alt = imagenesFiltradas[0].alt;
 
-/*       const crearImgsecundarias = document.createElement('img');
-      crearImgsecundarias.src = imagenesFiltradas.slice(1).imagen;
-      crearImgsecundarias.alt = imagenesFiltradas.slice(1).alt; */
+      /* Añadimos esto para evitar que cada vez que hacemos click en los botones no se repita ni el texto de presentación ni las imágenes, con esto limpiamos antes de hacer la llamada a la imagen y al texto  */  
+      txtPresentacion.innerHTML = '';
+      imagenPrincipal.innerHTML = '';
+      imgSecundarias.innerHTML = '';
+
+      /* Ahora filtramos las restantes imágenes con el alt */
+      imagenesFiltradas.slice(1).forEach ((imagen) => {
+        const crearDivImgSec = document.createElement('div')
+        const crearImgsecundarias = document.createElement('img');
+
         
+        crearImgsecundarias.src = imagen.imagen;
+        crearImgsecundarias.alt = imagen.alt;
+
+        crearDivImgSec.append(crearImgsecundarias)
+        imgSecundarias.append(crearDivImgSec)
+
+      });
+
+      /* Pintamos el párrafo donde se muestran el número de mágenes de la categoría y su nombre */
       crearDescripcion.classList.add('center');
       crearDescripcion.innerHTML = (`Se han encontrado <span class='colorPrincipal'>${imagenesFiltradas.length}</span> imagenes con la categoria <span class='colorPrincipal'>${tag}</span>`);
 
-      /* Añadimos esto para evitar que cada vez que hacemos click en los botones no se repita ni el texto de presentación ni las imágenes, con esto limpiamos antes de hacer la llamada a la imagen y al texto  */
-      txtPresentacion.innerHTML = '';
-      imagenPrincipal.innerHTML = '';
-      // imgSecundarias.innerHTML = '';
-      
-      imagenPrincipal.append(crearImagencentral);
-      // imgSecundarias.append(crearImgsecundarias);
-      txtPresentacion.append(crearDescripcion);
 
+      txtPresentacion.append(crearDescripcion);
+      imagenPrincipal.append(crearImagencentral);
     
     });
     fragment.append(crearBoton);
-    // fragment.append(crearImagencentral);
     
   });
   listBotones.append(fragment);

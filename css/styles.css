@@ -66,8 +66,12 @@ main {
   margin: 15px auto;
   width: 95%;
 }
+.containerImagenes div {
+  overflow: hidden;
+  border-radius: 10px;
+}
 img {
-  max-width: 100%;
+  width: 100%;
 }
 button {
   background-color: var(--color-negro-55);
@@ -141,7 +145,7 @@ p span {
       justify-content: center;
       width: 95%;
   }
-  .containerImagenes img {
+  .containerImagenes div {
     width: calc(50% - 10px);
   }
 }/*cierra 768*/
@@ -150,7 +154,7 @@ p span {
     Responsive 990
 ============================================== */
 @media screen and (min-width:990px) {
-.containerImagenes img {
+.containerImagenes div {
     width: calc(33% - 10px);
   }
 
@@ -161,6 +165,8 @@ p span {
     Responsive 1200
 ============================================== */
 @media screen and (min-width:1200px) {
-
+.containerImagenes div {
+    width: calc(25% - 20px);
+  }
 
 }/*cierra 1200*/
