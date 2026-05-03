@@ -1,6 +1,6 @@
 # Practica-Eventos-DOM30042026
 
-Resuen de las tareas realizadas para la creación del ejercicio de Práctica de Eventos 
+Resumen de las tareas realizadas para la creación del ejercicio de Práctica de Eventos 
 
 ## Descripción
 Web App que permite filtrar imágenes por categorías generadas dinámicamente a partir de un array de objetos. Se generan también dinámiv¡camente el alt de las imágens y los títulos de la imagen principal y de las imágenes secundarias
